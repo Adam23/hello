@@ -8,12 +8,57 @@
   	<servlet>
 		<servlet-name>s1</servlet-name>
 		<servlet-class>com.servlet.hello</servlet-class>
+		<init-param>
+			<param-name>han</param-name>
+			<param-value>hanhan</param-value>
+		</init-param>
+		<init-param>
+			<param-name>yi</param-name>
+			<param-value>yiyi</param-value>
+		</init-param>
 	</servlet>
+  <servlet>
+    <servlet-name>one</servlet-name>
+    <servlet-class>com.servlet.one</servlet-class>
+	
+  </servlet>
+  <servlet>
+    <servlet-name>two</servlet-name>
+    <servlet-class>com.servlet.two</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>downLoad</servlet-name>
+    <servlet-class>com.servlet.downLoad</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>getProperties</servlet-name>
+    <servlet-class>com.servlet.getProperties</servlet-class>
+  </servlet>
+
+
+
+
 	
 	<servlet-mapping>
 		<servlet-name>s1</servlet-name>
-		<url-pattern>/one</url-pattern>
+		<url-pattern>/hi</url-pattern>
 	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>one</servlet-name>
+    <url-pattern>/one</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>two</servlet-name>
+    <url-pattern>/two</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>downLoad</servlet-name>
+    <url-pattern>/downLoad</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getProperties</servlet-name>
+    <url-pattern>/servlet/getProperties</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

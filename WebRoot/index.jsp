@@ -115,8 +115,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    This is my JSP page. <br>
-    <form action="one" method="get">
+    <div style="background: url(imgs/qin.gif);width: 100px;height: 80px;">
+    </div>
+    <form action="downLoad" method="get">
+    	<input type="submit" value="下载"/>
+    </form>
+    <hr>
+    <form action="hi" method="post">
     	<input type="text" name="user" />
     	<input type="password" name="pwd"/>
     	<input type="submit" value="提交"/>

@@ -2,6 +2,7 @@ package com.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
@@ -13,14 +14,19 @@ public class hello extends HttpServlet{
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		
+		System.out.println("1111");
+		ServletConfig scf = getServletConfig();
+		scf.getInitParameterNames();
+		System.out.println("222");
+		System.out.println(scf.getInitParameterNames());
+		System.out.println("3333");
+		/*
 		resp.setContentType("text/html; charset=utf-8");
 
 		//获取输出流对象 
 		//PrintWriter pw = resp.getWriter(); 
 		ServletOutputStream pw = resp.getOutputStream(); 
-		pw.write((65+"").getBytes());
-		   
+		pw.write((65+"").getBytes());  
 		pw.write("<hr />".getBytes());
 		   
 		//进行输出
@@ -36,8 +42,10 @@ public class hello extends HttpServlet{
 		pw.write("<hr />".getBytes());
 		pw.write(("姓名   " +  req.getParameter("username")).getBytes("utf-8"));
 		pw.write( ("密码 " +  req.getParameter("pwd")).getBytes("utf-8"));
-		pw.write("<hr />".getBytes()); 
-		/*System.out.println(" ===  " + req.getParameter("user"));
+		pw.write("<hr />".getBytes()); */
+		
+		/*获取页面参数
+		System.out.println(" ===  " + req.getParameter("user"));
 		System.out.println(" ===  " + req.getParameter("pwd"));
 		
 		System.out.println( "req.getRemoteAddr()  = "+req.getRemoteAddr() );
@@ -49,5 +57,8 @@ public class hello extends HttpServlet{
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+		System.out.println(req.getParameter("user"));
+		
 	}
 }
