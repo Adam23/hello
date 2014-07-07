@@ -58,8 +58,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			ul{
 				list-style: none outside none;
 			}
-			
-			input{
+			.dl-div{float: left;}
+			.dl-div input{
 				padding: 10px;
 				margin: 10px;
 				width: 300px;
@@ -115,11 +115,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  	<form action="Login" method="get">
-  		用户名：<input type="text" name="name" />
-  		密码：<input type="password" name="pwd" />
-    	<input type="submit" value="登陆"/>
-    </form>
+  <hr>
+  		<a href="./Login">记住用户名</a>
     <hr>
     <div style="background: url(imgs/qin.gif);width: 100px;height: 80px;">
     </div>
@@ -127,16 +124,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<input type="submit" value="下载"/>
     </form>
     <hr>
+    
     <form action="hi" method="post">
-    	<input type="text" name="user" />
-    	<input type="password" name="pwd"/>
-    	<input type="submit" value="提交"/>
+    	<input type="text" name="user" /><br>
+    	<input type="password" name="pwd"/><br>
+    	<input type="submit" value="登陆"/>
     </form>
     <hr>
-		<div style="float:left"><input type="text" id="url" value="http://hanyike.com/wp/"/></div>
-		<div style="float:left"><input type="text" id="element" value="article"/></div>
-		<div style="float:left"><input type="text" id="interval" value="30"/></div>
-		<div style="float:left"><input type="button" id="start" value="开始抓取"/></div><div style="float:left"><input type="button" id="stop" value="暂停抓取"/></div><div style="float:left" id="msg"></div>
+		<div class="dl-div"><input type="text" id="url" value="http://hanyike.com/wp/"/></div>
+		<div class="dl-div"><input type="text" id="element" value="article"/></div>
+		<div class="dl-div"><input type="text" id="interval" value="30"/></div>
+		<div class="dl-div"><input type="button" id="start" value="开始抓取"/></div>
+		<div class="dl-div"><input type="button" id="stop" value="暂停抓取"/></div>
+		<div style="float:left" id="msg"></div>
 		<div style="clear:both"></div>
 		<div id="content"></div>
   </body>
