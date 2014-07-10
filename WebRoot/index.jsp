@@ -15,6 +15,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
+	<!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
 	<script src="http://lib.sinaapp.com/js/jquery/1.8/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -139,5 +142,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div style="float:left" id="msg"></div>
 		<div style="clear:both"></div>
 		<div id="content"></div>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
