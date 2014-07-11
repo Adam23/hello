@@ -17,7 +17,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="This is my page">
 	<!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	
 	<script src="http://lib.sinaapp.com/js/jquery/1.8/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
