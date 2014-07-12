@@ -23,13 +23,14 @@ public class UserServiceImpl implements UserService  {
 		}
 		
 		//若用户名不存在则注册：1.生成UUID   2.密码加密
-		u.setPwd(MD5Tools.MD5function(u.getPwd()));
 		u.setId(IdCreater.getRadomId());
+		u.setPwd(MD5Tools.MD5function(u.getPwd()));
 		boolean regist = ud.insertUser(u);
 		if(regist){
 			return true;
 		}else{
 			return false;
 		}
+		
 	}
 }
