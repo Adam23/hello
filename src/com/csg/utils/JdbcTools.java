@@ -1,4 +1,4 @@
-package com.csg.tools;
+package com.csg.utils;
 
 import java.io.InputStream;
 import java.sql.Connection;
