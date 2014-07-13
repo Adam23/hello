@@ -86,8 +86,9 @@ public class FormBean {
 		if(pwd!=null&&!username.trim().equals("")&&flag){
 			count++;
 			//判断两次密码是否一致
-			if(!repwd.equals(pwd)){
+			if(repwd.equals(pwd)){
 				count++;
+			}else{
 				error.put("repwd", "两次密码不一致！！你在逗我么亲(╯3╰)");
 			}
 		}else{
@@ -103,7 +104,7 @@ public class FormBean {
 		}
 		
 		//手机
-		flag = phone.matches("1(3-8)\\d{9}");
+		flag = phone.matches("1[3-8]\\d{9}");
 		if(phone!=null && !phone.trim().equals("") && flag){
 			count++;
 		}else{

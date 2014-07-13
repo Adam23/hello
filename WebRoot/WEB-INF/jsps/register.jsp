@@ -17,6 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 		<!-- Bootstrap -->
 		<link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath}/My97DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
 		<script src="http://lib.sinaapp.com/js/jquery/1.8/jquery.min.js"></script>
 
 	</head>
@@ -52,14 +53,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 					<div class="panel-body">
 						<form accept-charset="UTF-8" action="${pageContext.request.contextPath}/register" class="new_user"
-							id="new_user" method="POST">
+							id="new_user" method="post">
 							<div class="form-group">
 								<label for="user_username">
 									用户名
 								</label>
 								<input autofocus="autofocus" class="form-control"
 									id="user_username" name="username" type="text" value="${formbean.username}">
-								<code>${formerror.username}</code>
+								<span>${formerror.username}</span>
 							</div>
 							<div class="form-group">
 								<label for="user_password">
@@ -67,7 +68,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								</label>
 								<input class="form-control" id="user_password"
 									name="pwd" type="password">
-									<code>${formerror.pwd}</code>
+									<span>${formerror.pwd}</span>
 							</div>
 							<div class="form-group">
 								<label for="user_password_confirmation">
@@ -75,7 +76,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								</label>
 								<input class="form-control" id="user_password_confirmation"
 									name="repwd" type="password">
-								<code>${formerror.repwd}</code>
+								<span>${formerror.repwd}</span>
 							</div>
 							<div class="form-group">
 								<label for="user_email">
@@ -83,7 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								</label>
 								<input class="form-control" id="user_email" name="email"
 									type="email" value="${formbean.email}">
-								<code>${formerror.email}</code>
+								<span>${formerror.email}</span>
 							</div>
 							<div class="form-group">
 								<label for="user_phone">
@@ -91,15 +92,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								</label>
 								<input class="form-control" id="user_phone" name="phone"
 									type="text" value="${formbean.phone}">
-								<code>${formerror.phone}</code>
+								<span>${formerror.phone}</span>
 							</div>
 							<div class="form-group">
 								<label for="user_birthday">
 									生日
 								</label>
-								<input class="form-control" id="user_birthday" name="birthday"
-									type="text" value="${formbean.birthday}">
-								<code>${formerror.birthday}</code>
+								<input class="Wdate form-control " id="user_birthday" name="birthday"
+									type="text" onClick="WdatePicker()" style="height: 34px;">
+								<span>${formerror.birthday}</span>
 							</div>
 							<div>
 								<input class="btn btn-lg btn-block btn-success" name="commit"
@@ -123,5 +124,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 		</div>
 		<script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
+		<script language="javascript" type="text/javascript" src="${pageContext.request.contextPath}/My97DatePicker/WdatePicker.js"></script>
 	</body>
 </html>
