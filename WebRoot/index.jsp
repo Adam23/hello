@@ -117,7 +117,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  <a href="">登陆</a>
+  <a href="Login">登陆</a>
   <a href="reg">注册</a>
   <hr>
   		<a href="./Login">记住用户名</a>

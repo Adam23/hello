@@ -33,4 +33,22 @@ public class UserServiceImpl implements UserService  {
 		}
 		
 	}
+
+	/**
+	 * 用户登陆
+	 */
+	public boolean Login(String name, String pwd) {
+		UserDao ud = new UserDaoImpl();
+		
+		//调用dao层判断用户是否存在
+		User user = ud.checkByName(name);
+		if(user!=null){
+			/*if(user.getPwd().equals(MD5Tools.MD5function(pwd))){
+				return true;
+			}
+			return false;*/
+			return user.getPwd().equals(MD5Tools.MD5function(pwd))?true:false;
+		}
+		return false;
+	}
 }
