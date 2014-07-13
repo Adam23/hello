@@ -1,7 +1,6 @@
 package com.csg.dao.impl;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -69,7 +68,7 @@ public class UserDaoImpl implements UserDao {
 			+"','"+u.getPhone()+"','"+(new java.sql.Date(u.getBirthday().getTime()))+"','','');";
 			int n = stmt.executeUpdate(sql);
 			if(n>0){
-				System.out.println("注册成功");
+				System.out.println(u.getUsername()+"注册成功");
 				return true;
 			}
 		} catch (SQLException e) {

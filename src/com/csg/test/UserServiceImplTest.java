@@ -14,5 +14,10 @@ public class UserServiceImplTest {
 		User u = new User("","csg","123456","tt@yiyi.com","15804069271",new Date());
 		System.out.println(usi.Register(u));
 	}
+	
+	@Test
+	public void testLogin() {
+		System.out.println(usi.Login("csg1","123456"));
+	}
 
 }

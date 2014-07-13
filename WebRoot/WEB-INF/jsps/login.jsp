@@ -51,13 +51,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</h3>
 					</div>
 					<div class="panel-body">
-						<form accept-charset="UTF-8" action="${pageContext.request.contextPath}/register" class="user_login"
+						<form accept-charset="UTF-8" action="${pageContext.request.contextPath}/login" class="user_login"
 							id="new_user" method="post">
 							<div class="form-group">
 								<label for="user_username">
 									用户名
 								</label>
-								<input autofocus="autofocus" class="form-control"
+								<input class="form-control"
 									id="user_username" name="username" type="text" value="">
 								<span></span>
 							</div>
@@ -71,13 +71,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</div>
 							<div>
 								<input class="btn btn-lg btn-block btn-success" name="commit"
-									type="submit" value="提交">
+									type="submit" value="登录">
 							</div>
 						</form>
 					</div>
 					<div class="panel-footer">
-						已经阅读并同意
-						<a href="./terms">我们的条款</a>.
+						<input type="checkbox" name="remember"/>记住用户名
 					</div>
 				</div>
 			</div>
