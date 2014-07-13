@@ -58,7 +58,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									用户名
 								</label>
 								<input autofocus="autofocus" class="form-control"
-									id="user_username" name="username" type="text">
+									id="user_username" name="username" type="text" value="${formbean.username}">
+								<code>${formerror.username}</code>
 							</div>
 							<div class="form-group">
 								<label for="user_password">
@@ -66,6 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								</label>
 								<input class="form-control" id="user_password"
 									name="pwd" type="password">
+									<code>${formerror.pwd}</code>
 							</div>
 							<div class="form-group">
 								<label for="user_password_confirmation">
@@ -73,27 +75,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								</label>
 								<input class="form-control" id="user_password_confirmation"
 									name="repwd" type="password">
+								<code>${formerror.repwd}</code>
 							</div>
 							<div class="form-group">
 								<label for="user_email">
 									邮箱
 								</label>
 								<input class="form-control" id="user_email" name="email"
-									type="email" value="">
+									type="email" value="${formbean.email}">
+								<code>${formerror.email}</code>
 							</div>
 							<div class="form-group">
 								<label for="user_phone">
 									手机
 								</label>
 								<input class="form-control" id="user_phone" name="phone"
-									type="text" value="">
+									type="text" value="${formbean.phone}">
+								<code>${formerror.phone}</code>
 							</div>
 							<div class="form-group">
 								<label for="user_birthday">
 									生日
 								</label>
 								<input class="form-control" id="user_birthday" name="birthday"
-									type="text" value="">
+									type="text" value="${formbean.birthday}">
+								<code>${formerror.birthday}</code>
 							</div>
 							<div>
 								<input class="btn btn-lg btn-block btn-success" name="commit"

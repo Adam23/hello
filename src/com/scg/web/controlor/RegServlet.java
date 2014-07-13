@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.ConvertUtils;
@@ -27,6 +28,15 @@ public class RegServlet extends HttpServlet {
 			//将表单数据封装到FormBean中
 			FormBean fb = (FormBean) Form2Bean.toBean(request, Class.forName("com.csg.domain.FormBean"));
 			
+			if(!fb.test()){
+				//用于回显已填的注册信息
+				request.setAttribute("formbean", fb );
+				//用于错误提示
+				request.setAttribute("formerror", fb.getError());
+				request.getRequestDispatcher("/WEB-INF/jsps/register.jsp").forward(request, response);
+				return ;
+			}
+			
 			//将FormBean 封装到UserBean中
 			User user = new User();
 			ConvertUtils.register(new DateLocaleConverter(), Date.class); //java.util
@@ -35,9 +45,14 @@ public class RegServlet extends HttpServlet {
 			//调用service层的注册方法
 			boolean reg = us.Register(user);
 			if(reg){
-				response.getWriter().write("succses");
+				HttpSession  session = request.getSession();
+				session.setAttribute("userbean", user);
+				request.setAttribute("message", "注册成功,3秒后转向主页！<meta http-equiv='refresh' content='3;url=index.jsp'> 恭喜你登录成功，立即跳转！ ");
+				request.getRequestDispatcher("message.jsp").forward(request, response); 
 			}else{
-				response.getWriter().write("error");
+				HttpSession  session = request.getSession();
+				session.setAttribute("message", "注册失败~~~");
+				request.getRequestDispatcher("message.jsp").forward(request, response); 
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
