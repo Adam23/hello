@@ -3,7 +3,7 @@ package com.csg.utils;
 import java.util.UUID;
 
 /**
- * Éú³ÉËæ¼´µÄUUID
+ * ç”Ÿæˆéšå³çš„UUID
  * @author csg
  *
  */

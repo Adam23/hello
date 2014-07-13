@@ -4,16 +4,16 @@ import com.csg.domain.User;
 
 public interface UserDao {
 	/**
-	 * ¼ì²éÓÃ»§ÃûÊÇ·ñ´æÔÚ
-	 * @param name ÓÃ»§Ãû
-	 * @return user¶ÔÏó
+	 * æ£€æŸ¥ç”¨æˆ·åæ˜¯å¦å­˜åœ¨
+	 * @param name ç”¨æˆ·å
+	 * @return userå¯¹è±¡
 	 */
 	public abstract User checkByName(String name);
 	
 	/**
-	 * ĞÂÔöÓÃ»§
-	 * @param u »ñµÃµ½µÄ·â×°ÔÚUserBeanÖĞµÄ¶ÔÏó
-	 * @return user¶ÔÏó
+	 * æ–°å¢ç”¨æˆ·
+	 * @param u è·å¾—åˆ°çš„å°è£…åœ¨UserBeanä¸­çš„å¯¹è±¡
+	 * @return userå¯¹è±¡
 	 */
 	public abstract boolean insertUser(User u);
 

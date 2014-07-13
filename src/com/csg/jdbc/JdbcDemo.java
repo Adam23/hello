@@ -8,16 +8,16 @@ import java.sql.Statement;
 public class JdbcDemo {
 
 	public static void main(String[] args) throws Exception {
-		//1加载驱动
+		//1鍔犺浇椹卞姩
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		//2 创建连接
+		//2 鍒涘缓杩炴帴
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "12345");
 		
-		//3 创建statement对象
+		//3 鍒涘缓statement瀵硅薄
 		Statement stmt = conn.createStatement();
 		
-		//4 操作
+		//4 鎿嶄綔
 		ResultSet  rs = stmt.executeQuery("select * from csg_user");
 		
 		while (rs.next()) {

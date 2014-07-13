@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,13 +22,13 @@ public class hello extends HttpServlet{
 		/*
 		resp.setContentType("text/html; charset=utf-8");
 
-		//»ñÈ¡Êä³öÁ÷¶ÔÏó 
+		//è·å–è¾“å‡ºæµå¯¹è±¡ 
 		//PrintWriter pw = resp.getWriter(); 
 		ServletOutputStream pw = resp.getOutputStream(); 
 		pw.write((65+"").getBytes());  
 		pw.write("<hr />".getBytes());
 		   
-		//½øĞĞÊä³ö
+		//è¿›è¡Œè¾“å‡º
 		pw.write("hello  world   how are you <br />".getBytes());
 		pw.write("hello  world   how are you".getBytes());
 			
@@ -37,14 +36,14 @@ public class hello extends HttpServlet{
 		
 		pw.write("<input type=\"text\"  name=\"xxx\" />".getBytes());
 		
-		pw.write("<a href='http://www.ifeng.com' > ·ï»Ë </a>".getBytes("utf-8"));
+		pw.write("<a href='http://www.ifeng.com' > å‡¤å‡° </a>".getBytes("utf-8"));
 	 
 		pw.write("<hr />".getBytes());
-		pw.write(("ĞÕÃû   " +  req.getParameter("username")).getBytes("utf-8"));
-		pw.write( ("ÃÜÂë " +  req.getParameter("pwd")).getBytes("utf-8"));
+		pw.write(("å§“å   " +  req.getParameter("username")).getBytes("utf-8"));
+		pw.write( ("å¯†ç  " +  req.getParameter("pwd")).getBytes("utf-8"));
 		pw.write("<hr />".getBytes()); */
 		
-		/*»ñÈ¡Ò³Ãæ²ÎÊı
+		/*è·å–é¡µé¢å‚æ•°
 		System.out.println(" ===  " + req.getParameter("user"));
 		System.out.println(" ===  " + req.getParameter("pwd"));
 		

@@ -26,14 +26,14 @@ private void dd(HttpServletRequest request, HttpServletResponse response)
 	String name = "";
 	if (remember != null ||!remember.trim().equals("") ) {
 		name = request.getParameter("username");
-		// Èç¹ûÑ¡ÖĞÁË£¬°ÑÓÃ»§ÃûĞ´µ½cookieÖĞ
+		// å¦‚æœé€‰ä¸­äº†ï¼ŒæŠŠç”¨æˆ·åå†™åˆ°cookieä¸­
 		Cookie c = new Cookie("jizhuyonghuming", name);
 		c.setPath(request.getContextPath());
-		c.setMaxAge(Integer.MAX_VALUE);// ÓÀ¾Ã±£´æ
+		c.setMaxAge(Integer.MAX_VALUE);// æ°¸ä¹…ä¿å­˜
 		response.addCookie(c);
 	}
 	response.setContentType("text/html;charset=UTF-8");
-	response.getWriter().println(name + "µÇÂ½³É¹¦£¡");
+	response.getWriter().println(name + "ç™»é™†æˆåŠŸï¼");
 }
 
 }

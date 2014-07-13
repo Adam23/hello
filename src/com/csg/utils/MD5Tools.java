@@ -6,30 +6,30 @@ import java.security.NoSuchAlgorithmException;
 import sun.misc.BASE64Encoder;
 
 /**
- * MD5¼ÓÃÜ¹¤¾ß
+ * MD5åŠ å¯†å·¥å…·
  * @author csg
  *
  */
 public class MD5Tools {
 
 	/**
-	 * MD5¼ÓÃÜ·½·¨
-	 * ²ÎÊı   ×Ö·û´®
-	 * ·µ»Ø   ¼ÓÃÜºóµÄ×Ö·û´®
+	 * MD5åŠ å¯†æ–¹æ³•
+	 * å‚æ•°   å­—ç¬¦ä¸²
+	 * è¿”å›   åŠ å¯†åçš„å­—ç¬¦ä¸²
 	 */
 	public static String MD5function(String s){
 
-		//´´½¨MD5Ëã·¨
+		//åˆ›å»ºMD5ç®—æ³•
 		MessageDigest md5 = null;
 		String encode = null;
 		try {
 			md5 = MessageDigest.getInstance("MD5");
-			//°ÑString ×ª»¯³É×Ö½ÚÊı×é
+			//æŠŠString è½¬åŒ–æˆå­—èŠ‚æ•°ç»„
 			byte[] bt = md5.digest(s.getBytes());
 			
-			// ½«±àÂëºóµÄÊı¾İ Í¨¹ıBASE64×ª»»ÎªStringÀàĞÍ     Base64±àÂëµÄÔ­ÀíÊÇ°´bit½«Ã¿6¸öbit×ª»»³ÉBase64±àÂë±íÖĞµÄÏàÓ¦×Ö·û
+			// å°†ç¼–ç åçš„æ•°æ® é€šè¿‡BASE64è½¬æ¢ä¸ºStringç±»å‹     Base64ç¼–ç çš„åŸç†æ˜¯æŒ‰bitå°†æ¯6ä¸ªbitè½¬æ¢æˆBase64ç¼–ç è¡¨ä¸­çš„ç›¸åº”å­—ç¬¦
 			BASE64Encoder  en = new BASE64Encoder();
-			//Ê¹ÓÃBASE64½øĞĞ±àÂë
+			//ä½¿ç”¨BASE64è¿›è¡Œç¼–ç 
 			encode = en.encode(bt);
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block

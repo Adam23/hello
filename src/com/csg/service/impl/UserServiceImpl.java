@@ -10,19 +10,19 @@ import com.csg.utils.MD5Tools;
 
 public class UserServiceImpl implements UserService  {
 	/**
-	 * ÓÃ»§×¢²á
+	 * ç”¨æˆ·æ³¨å†Œ
 	 */
 	public boolean Register(User u){
-		//´´½¨dao²ãÀàµÄ¶ÔÏó£¨ÕâÀï£¬Ê¹ÓÃÁË¶àÌ¬£©
+		//åˆ›å»ºdaoå±‚ç±»çš„å¯¹è±¡ï¼ˆè¿™é‡Œï¼Œä½¿ç”¨äº†å¤šæ€ï¼‰
 		UserDao ud = new UserDaoImpl();
 		
-		//µ÷ÓÃdao²ãÅĞ¶ÏÓÃ»§ÊÇ·ñ´æÔÚ
+		//è°ƒç”¨daoå±‚åˆ¤æ–­ç”¨æˆ·æ˜¯å¦å­˜åœ¨
 		User user = ud.checkByName(u.getUsername());
 		if(user!=null){
 			return false;
 		}
 		
-		//ÈôÓÃ»§Ãû²»´æÔÚÔò×¢²á£º1.Éú³ÉUUID   2.ÃÜÂë¼ÓÃÜ
+		//è‹¥ç”¨æˆ·åä¸å­˜åœ¨åˆ™æ³¨å†Œï¼š1.ç”ŸæˆUUID   2.å¯†ç åŠ å¯†
 		u.setId(IdCreater.getRadomId());
 		u.setPwd(MD5Tools.MD5function(u.getPwd()));
 		boolean regist = ud.insertUser(u);

@@ -10,16 +10,16 @@ import java.util.Properties;
 
 public class JdbcTools {
 
-	//Çı¶¯Ãû
+	//é©±åŠ¨å
 	private static String driverName;
 	
-	//Êı¾İ¿âÁ¬½ÓµØÖ·
+	//æ•°æ®åº“è¿æ¥åœ°å€
 	private static String url;
 
-	//Êı¾İ¿âuser
+	//æ•°æ®åº“user
 	private static String username;
 	
-	//Êı¾İ¿âpassword
+	//æ•°æ®åº“password
 	private static String pwd;
 	
 	static{
@@ -34,16 +34,16 @@ public class JdbcTools {
 			System.out.println("driverName"+driverName);
 			System.out.println("url"+url);
 			
-			//¼ÓÔØÇı¶¯
+			//åŠ è½½é©±åŠ¨
 			Class.forName(driverName);
 		} catch (Exception e) {
-			throw new RuntimeException("¼ÓÔØÊı¾İ¿â³ö´íÁË" +e);
+			throw new RuntimeException("åŠ è½½æ•°æ®åº“å‡ºé”™äº†" +e);
 		}
 	}
 
 	
 	/**
-	 * »ñÈ¡Á¬½Ó
+	 * è·å–è¿æ¥
 	 * @return
 	 * @throws SQLException 
 	 */
@@ -53,7 +53,7 @@ public class JdbcTools {
 	}
 
 	/**
-	 * ¹Ø±ÕÁ¬½Ó
+	 * å…³é—­è¿æ¥
 	 * @return 
 	 */
 	public static void close(ResultSet rs,Statement stmt,Connection conn){

@@ -1,9 +1,35 @@
-#Sun Jul 13 12:23:32 CST 2014
+#Sun Jul 13 12:35:30 CST 2014
 eclipse.preferences.version=1
 encoding//WebRoot/error.jsp=UTF-8
 encoding//WebRoot/jstl.jsp=UTF-8
 encoding//WebRoot/register.jsp=UTF-8
+encoding//src/com/csg/beanutils=UTF-8
 encoding//src/com/csg/beanutils/UserTest.java=UTF-8
+encoding//src/com/csg/dao=UTF-8
 encoding//src/com/csg/dao/UserDao.java=UTF-8
+encoding//src/com/csg/dao/impl=UTF-8
 encoding//src/com/csg/dao/impl/UserDaoImpl.java=UTF-8
+encoding//src/com/csg/domain=UTF-8
+encoding//src/com/csg/jdbc=UTF-8
+encoding//src/com/csg/jdbc/JdbcDemo.java=UTF-8
+encoding//src/com/csg/jdbc/JdbcTools.java=UTF-8
+encoding//src/com/csg/service=UTF-8
+encoding//src/com/csg/service/UserService.java=UTF-8
+encoding//src/com/csg/service/impl=UTF-8
+encoding//src/com/csg/service/impl/UserServiceImpl.java=UTF-8
+encoding//src/com/csg/test=UTF-8
+encoding//src/com/csg/utils=UTF-8
 encoding//src/com/csg/utils/Form2Bean.java=UTF-8
+encoding//src/com/csg/utils/IdCreater.java=UTF-8
+encoding//src/com/csg/utils/JdbcTools.java=UTF-8
+encoding//src/com/csg/utils/MD5Tools.java=UTF-8
+encoding//src/com/scg/web/controlor=UTF-8
+encoding//src/com/scg/web/controlor/RegServlet.java=UTF-8
+encoding//src/com/scg/web/ui=UTF-8
+encoding//src/com/servlet=UTF-8
+encoding//src/com/servlet/Addresss.java=UTF-8
+encoding//src/com/servlet/Login.java=UTF-8
+encoding//src/com/servlet/Login2.java=UTF-8
+encoding//src/com/servlet/downLoad.java=UTF-8
+encoding//src/com/servlet/getProperties.java=UTF-8
+encoding//src/com/servlet/hello.java=UTF-8

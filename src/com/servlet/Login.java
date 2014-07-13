@@ -27,30 +27,30 @@ public class Login extends HttpServlet {
 		}
 		 
 
-		// ÏÔÊ¾³öµÇÂ½Ò³Ãæ
+		// æ˜¾ç¤ºå‡ºç™»é™†é¡µé¢
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
-		out.println("<head><title>ÓÃ»§µÇÂ½</title></head>");
+		out.println("<head><title>ç”¨æˆ·ç™»é™†</title></head>");
 		out.println("<body>");
 		out.println("<form action='Login2' method='post'>");
 		out.println("<table width='400' border='1'>");
 		out.println("<tr>");
-		out.println("<td>ÓÃ»§Ãû</td>");
+		out.println("<td>ç”¨æˆ·å</td>");
 		out.println("<td><input type='text' name='username' value='"+ name +"' /></td>");
 		out.println("</tr>");
 
 		out.println("<tr>");
-		out.println("<td>ÃÜÂë</td>");
+		out.println("<td>å¯†ç </td>");
 		out.println("<td><input type='password' name='password'/></td>");
 		out.println("</tr>");
 
 		out.println("<tr>");
-		out.println("<td colspan='2'><input type='checkbox' name='remember' value='aabb' "+ mycheck + " />¼Ç×¡ÓÃ»§Ãû</td>");
+		out.println("<td colspan='2'><input type='checkbox' name='remember' value='aabb' "+ mycheck + " />è®°ä½ç”¨æˆ·å</td>");
 		out.println("</tr>");
 
 		out.println("<tr>");
-		out.println("<td colspan='2'><input type='submit' value='µÇÂ¼'/></td>");
+		out.println("<td colspan='2'><input type='submit' value='ç™»å½•'/></td>");
 		out.println("</tr>");
 
 		out.println("</table>");

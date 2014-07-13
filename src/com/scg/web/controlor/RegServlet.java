@@ -24,15 +24,15 @@ public class RegServlet extends HttpServlet {
 			throws ServletException, IOException {
 		UserService us = new UserServiceImpl();
 		try {
-			//½«±íµ¥Êı¾İ·â×°µ½FormBeanÖĞ
+			//å°†è¡¨å•æ•°æ®å°è£…åˆ°FormBeanä¸­
 			FormBean fb = (FormBean) Form2Bean.toBean(request, Class.forName("com.csg.domain.FormBean"));
 			
-			//½«FormBean ·â×°µ½UserBeanÖĞ
+			//å°†FormBean å°è£…åˆ°UserBeanä¸­
 			User user = new User();
 			ConvertUtils.register(new DateLocaleConverter(), Date.class); //java.util
 			BeanUtils.copyProperties(user, fb);
 			
-			//µ÷ÓÃservice²ãµÄ×¢²á·½·¨
+			//è°ƒç”¨serviceå±‚çš„æ³¨å†Œæ–¹æ³•
 			boolean reg = us.Register(user);
 			if(reg){
 				response.getWriter().write("succses");

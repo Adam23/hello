@@ -1,7 +1,7 @@
 package com.servlet;
 
 public class Addresss {
-	private String city="±±¾©";
+	private String city="åŒ—äº¬";
 
 	public void setCity(String city) {
 		this.city = city;

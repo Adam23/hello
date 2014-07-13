@@ -2,7 +2,6 @@ package com.servlet;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Enumeration;
 import java.util.Properties;
 
@@ -11,17 +10,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sun.jmx.snmp.Enumerated;
-
 public class getProperties extends HttpServlet {
 
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		//»ñÈ¡²Ù×÷µÄÎÄ¼ş
+		//è·å–æ“ä½œçš„æ–‡ä»¶
 		String path= this.getServletContext().getRealPath("/WEB-INF/my.properties");
 		
-		//ÀûÓÃpropertie¶ÔÏó¶ÁÈ¡
+		//åˆ©ç”¨propertieå¯¹è±¡è¯»å–
 		Properties pp = new Properties();
 		FileInputStream fis = new FileInputStream(path);
 		pp.load(fis);
