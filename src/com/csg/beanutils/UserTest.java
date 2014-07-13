@@ -12,7 +12,7 @@ import org.apache.commons.beanutils.locale.converters.DateLocaleConverter;
 public class UserTest {
 
 	/**
-	 * Ê¹ÓÃBeanUtils²Ù×÷ÊôĞÔµÄ¶¯Ì¬getter,setter ----------so easy
+	 * ä½¿ç”¨BeanUtilsæ“ä½œå±æ€§çš„åŠ¨æ€getter,setter ----------so easy
 	 * @throws InvocationTargetException 
 	 * @throws IllegalAccessException 
 	 * @throws NoSuchMethodException 
@@ -23,7 +23,7 @@ public class UserTest {
 		String my = BeanUtils.getProperty(user, "name");
 		System.out.println(my);
 		
-		//½«StringÀàĞÍ×ª»¯³ÉDateÀàĞÍ
+		//å°†Stringç±»å‹è½¬åŒ–æˆDateç±»å‹
 		ConvertUtils.register(new DateLocaleConverter(), Date.class);
 		BeanUtils.setProperty(user, "birthday", "2014-7-11");
 		String birth = BeanUtils.getProperty(user, "birthday");
@@ -34,10 +34,10 @@ public class UserTest {
 		hm.put("age", 25);
 		hm.put("birthday", "1990-7-11");
 		
-		//½«StringÀàĞÍ×ª»¯³ÉDateÀàĞÍ
+		//å°†Stringç±»å‹è½¬åŒ–æˆDateç±»å‹
 		ConvertUtils.register(new DateLocaleConverter(), Date.class);
 		
-		// ½«mapÖĞµÄÖµ ·ÅÈëµ½javaBeanÖĞ µ«ÊÇÃû³ÆÒªÒ»ÖÂ
+		// å°†mapä¸­çš„å€¼ æ”¾å…¥åˆ°javaBeanä¸­ ä½†æ˜¯åç§°è¦ä¸€è‡´
 		BeanUtils.populate(user, hm);
 		
 	}

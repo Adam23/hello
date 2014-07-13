@@ -17,11 +17,11 @@ public class Form2Bean {
 	public static FormBean  ToBean(ServletRequest request){
 		FormBean bean = null;
 		try {
-			//1 »ñÈ¡±íµ¥ÖĞµÄÊı¾İ  ----map
+			//1 è·å–è¡¨å•ä¸­çš„æ•°æ®  ----map
 			Map map = request.getParameterMap();
 			Class  forName = Class.forName("com.csg.domain.FormBean");
 			bean = (FormBean) forName.newInstance();
-			//2 ½«mapÖĞµÄÊı¾İ ·â×°µ½ FormBeanÖĞ
+			//2 å°†mapä¸­çš„æ•°æ® å°è£…åˆ° FormBeanä¸­
 			BeanUtils.populate(bean, map);
 		} catch ( Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class Form2Bean {
 	}
 	
 	/**
-	 * Í¨¹ı×Ô¶¨Òå·´Éä ¸ã¶¨£¬ ÕâÑùÆäËûµÄBeanÒ²¿ÉÒÔÓÃ£¬À©Õ¹ĞÔºÃ
-	 * @param <T>  ÀıÈçÉÏÃæµÄClass.forName("com.csg.domain.FormBean")
-	 * @param request
-	 * @param cla
+	 * é€šè¿‡è‡ªå®šä¹‰åå°„ æå®šï¼Œ è¿™æ ·å…¶ä»–çš„Beanä¹Ÿå¯ä»¥ç”¨ï¼Œæ‰©å±•æ€§å¥½
+	 * @param <T>  
+	 * @param request 
+	 * @param cla  
 	 * @return
 	 */
 	public static <T> T  toBean(ServletRequest request,Class<T> cla){

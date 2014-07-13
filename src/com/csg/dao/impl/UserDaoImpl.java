@@ -14,7 +14,7 @@ import com.csg.utils.JdbcTools;
 public class UserDaoImpl implements UserDao {
 
 	/**
-	 * 实现checkByName接口
+	 * 瀹炵幇checkByName鎺ュ彛
 	 */
 	public User checkByName(String name) {
 		Connection conn = null;
@@ -45,7 +45,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	/**
-	 * 实现insertUser接口
+	 * 瀹炵幇insertUser鎺ュ彛
 	 */
 	public boolean insertUser(User u) {
 		Connection conn = null;
@@ -69,7 +69,7 @@ public class UserDaoImpl implements UserDao {
 			+"','"+u.getPhone()+"','"+(new java.sql.Date(u.getBirthday().getTime()))+"','','');";
 			int n = stmt.executeUpdate(sql);
 			if(n>0){
-				System.out.println("注册成功");
+				System.out.println("娉ㄥ唽鎴愬姛");
 				return true;
 			}
 		} catch (SQLException e) {
@@ -79,6 +79,4 @@ public class UserDaoImpl implements UserDao {
 		}
 		return false;
 	}
-	
-
 }
