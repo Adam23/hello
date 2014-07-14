@@ -1,5 +1,7 @@
 package com.csg.dao;
 
+import java.util.List;
+
 import com.csg.domain.User;
 
 public interface UserDao {
@@ -16,5 +18,11 @@ public interface UserDao {
 	 * @return user对象
 	 */
 	public abstract boolean insertUser(User u);
+	
+	/**
+	 * 查找所有用户
+	 * @return 
+	 */
+	public abstract List<User> findAllUsers();
 
 }

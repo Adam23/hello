@@ -1,5 +1,7 @@
 package com.csg.service;
 
+import java.util.List;
+
 import com.csg.domain.User;
 
 public interface UserService {
@@ -18,5 +20,11 @@ public interface UserService {
 	 * @return
 	 */
 	public abstract User Login(String name, String pwd);
+	
+	/**
+	 * 查看所有用户
+	 * @return
+	 */
+	public abstract List<User> FindAllUsers();
 
 }

@@ -1,6 +1,7 @@
 package com.csg.test;
 
 import java.util.Date;
+import java.util.List;
 
 import junit.framework.Assert;
 
@@ -23,5 +24,11 @@ public class UserDaoImplTest {
 		User u = new User("3333","lll","123123","tt@x.com","15804040404",new Date());
 		boolean t = udi.insertUser(u);
 		Assert.assertTrue(t);
+	}
+	
+	@Test
+	public void testFindAll() {
+		List<User> findAllUsers = udi.findAllUsers();
+		System.out.println(findAllUsers.size());
 	}
 }

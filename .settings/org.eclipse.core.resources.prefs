@@ -1,6 +1,8 @@
-#Sun Jul 13 21:19:29 CST 2014
+#Mon Jul 14 14:50:41 CST 2014
 eclipse.preferences.version=1
 encoding//WebRoot/error.jsp=UTF-8
+encoding//WebRoot/frame=UTF-8
+encoding//WebRoot/frame/left.jsp=UTF-8
 encoding//WebRoot/jstl.jsp=UTF-8
 encoding//src/com/csg/beanutils=UTF-8
 encoding//src/com/csg/beanutils/UserTest.java=UTF-8

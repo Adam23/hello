@@ -19,5 +19,10 @@ public class UserServiceImplTest {
 	public void testLogin() {
 		System.out.println(usi.Login("csg1","123456"));
 	}
+	
+	@Test
+	public void test() {
+		System.out.println(usi.FindAllUsers().size());
+	}
 
 }

@@ -1,6 +1,7 @@
 package com.csg.service.impl;
 
 import java.util.Date;
+import java.util.List;
 
 import com.csg.dao.UserDao;
 import com.csg.dao.impl.UserDaoImpl;
@@ -53,5 +54,14 @@ public class UserServiceImpl implements UserService  {
 			}
 		}
 		return user;
+	}
+
+	/*
+	 * 查看用户
+	 * (non-Javadoc)
+	 * @see com.csg.service.UserService#FindAllUsers()
+	 */
+	public List<User> FindAllUsers() {
+		return  ud.findAllUsers();
 	}
 }

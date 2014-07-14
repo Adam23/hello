@@ -4,7 +4,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import com.csg.dao.UserDao;
 import com.csg.domain.User;
@@ -77,5 +79,39 @@ public class UserDaoImpl implements UserDao {
 			JdbcTools.close(rs, stmt, conn);
 		}
 		return false;
+	}
+
+	/**
+	 * 查看所有用户信息
+	 */
+	public List<User> findAllUsers() {
+		
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		User u = null;
+		List<User> list = new ArrayList<User>();
+		try {
+			conn = JdbcTools.getConn();
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery("select * from user ");
+			while (rs.next()) {
+				u = new User();
+				u.setId(rs.getString("id"));
+				u.setUsername("username");
+				u.setPwd(rs.getString("pwd"));
+				u.setEmail(rs.getString("email"));
+				u.setPhone(rs.getString("phone"));
+				u.setBirthday(new Date(rs.getDate("birthday").getTime()));
+				list.add(u);
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally{
+			JdbcTools.close(rs, stmt, conn);
+		}
+		
+		return list;
 	}
 }
