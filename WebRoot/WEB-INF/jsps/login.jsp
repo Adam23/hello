@@ -76,7 +76,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</form>
 					</div>
 					<div class="panel-footer">
-						<input type="checkbox" name="remember"/>记住用户名
+						<input type="checkbox" name="remember" value="re"/>记住用户名
 					</div>
 				</div>
 			</div>

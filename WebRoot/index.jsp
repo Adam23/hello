@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8" isErrorPage="true" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -117,8 +118,33 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  <a href="Login">登陆</a>
-  <a href="reg">注册</a>
+  	   <div class="navbar navbar-inverse">
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                 </button>
+                 <a class="navbar-brand" href="#">XX系统</a>
+             </div>
+             <div class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                     <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>首页</a></li>
+                     <li><a href="./cates"><span class="glyphicon glyphicon-th"></span> 分类管理</a></li>
+                     <li><a href="./about"><span class="glyphicon glyphicon-question-sign"></span> 关于我们</a></li>
+                 </ul>
+             </div>
+        </div>
+  
+  <c:if test="${empty loginuser}">
+  	<a href="Login">登陆</a>
+  	<a href="reg">注册</a>
+  </c:if>
+  <c:if test="${!empty loginuser}">
+  	${loginuser.username}欢迎回来 &nbsp;<a href="LoginOut">退出</a>
+  </c:if>
+ 
+  
   <hr>
   		<a href="./Login">记住用户名</a>
     <hr>

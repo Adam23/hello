@@ -1,5 +1,7 @@
 package com.csg.service.impl;
 
+import java.util.Date;
+
 import com.csg.dao.UserDao;
 import com.csg.dao.impl.UserDaoImpl;
 import com.csg.domain.User;
@@ -9,12 +11,13 @@ import com.csg.utils.MD5Tools;
 
 
 public class UserServiceImpl implements UserService  {
+	
+	//创建dao层类的对象（这里，使用了多态）
+	UserDao ud = new UserDaoImpl();
 	/**
 	 * 用户注册
 	 */
 	public boolean Register(User u){
-		//创建dao层类的对象（这里，使用了多态）
-		UserDao ud = new UserDaoImpl();
 		
 		//调用dao层判断用户是否存在
 		User user = ud.checkByName(u.getUsername());
@@ -37,17 +40,18 @@ public class UserServiceImpl implements UserService  {
 	/**
 	 * 用户登陆
 	 */
-	public int Login(String name, String pwd) {
-		UserDao ud = new UserDaoImpl();
+	public User Login(String name, String pwd) {
 		
 		//调用dao层判断用户是否存在
 		User user = ud.checkByName(name);
 		if(user!=null){
 			if(user.getPwd().equals(MD5Tools.MD5function(pwd))){
-				return 2;
+				return user;
+			}else{
+				user = new User("", name, "", "", "", new Date());
+				return user;
 			}
-			return 1;
 		}
-		return 0;
+		return user;
 	}
 }
